@@ -20,6 +20,6 @@ public class ImageController {
     @PostMapping("/upload")
     public ResponseResult<String> uploadImage( @RequestParam("file") MultipartFile file){
         String imagePath = imageService.uploadImage(file);
-        return new ResponseResult<>("aa");
+        return new ResponseResult<>(imagePath);
     }
 }
