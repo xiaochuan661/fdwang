@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: fdwang
+  profiles:
+    active: custome-compiler
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    joda-date-time-format: yyyy-MM-dd HH:mm:ss
+  datasource:
+    url: jdbc:mysql://localhost:3306/fdwang
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+  freemarker:
+    cache: false
+  thymeleaf:
+    cache: false
+mybatis:
+  config-location: classpath:mybatis.xml
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+
+
+server:
+  context-path: /fdwang
+  port: 8080
+
+
+project:
+  local:
+    space: C:/image
